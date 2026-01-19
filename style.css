@@ -6,3 +6,159 @@ body{
 	padding: 10px 10px 10px 10px;
 	font-family: sans serif;
     }
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Мой блог</title>
+    <style>
+        /* Общий сброс и настройки */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Красивый фон */
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+            line-height: 1.7;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* Основной контейнер */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(6px);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Дата */
+        .date {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        /* Заголовки */
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        h1 {
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #34495e;
+        }
+        h2 {
+            font-size: 1.6em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        /* Текст */
+        p {
+            margin-bottom: 18px;
+            font-size: 1.05em;
+        }
+
+        /* Списки */
+        ul, ol {
+            margin: 15px 0 20px 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Выделение результата */
+        .result {
+            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            padding: 16px;
+            border-radius: 10px;
+            margin: 25px 0;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
+            color: #0d47a1;
+            border-left: 4px solid #2196f3;
+        }
+
+        /* Таблица (если есть) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Подвал */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #95a5a6;
+            font-size: 0.95em;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px 10px;
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="date">19 января 2026 г.</p>
+
+        <h1>Мой криптографический блог</h1>
+
+        <p>Добро пожаловать! Здесь я делюсь решениями задач по криптографии, включая шифр Цезаря и другие классические методы.</p>
+
+        <h2>Пример: Шифрование фамилии «Плешу»</h2>
+        <p>Используем ключ <strong>10</strong> и полный русский алфавит из <strong>33 букв</strong> (включая «Ё»).</p>
+
+        <div class="result">
+            Результат: <strong>ЩХОВЭ</strong>
+        </div>
+
+        <p>Подробное решение с таблицей и пояснениями доступно в предыдущих записях.</p>
+
+        <footer>
+            &copy; 2026 Мой блог по криптографии
+        </footer>
+    </div>
+</body>
+</html>
