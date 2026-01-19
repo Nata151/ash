@@ -139,9 +139,87 @@
         <li>ФХНЗКЧ → <strong>ПРИВЕТ</strong> (ключ 5)</li>
         <li>ЦЩЕБФ → <strong>ВЕСНА</strong> (ключ 20)</li>
     </ul>
-</body>
-</html>
 
+<head>
+    <meta charset="UTF-8">
+    <title>Шифр Цезаря — 33 буквы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .result {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+    <p>19 января 2026 г.</p>
+
+    <h1>Шифрование фамилии «Плешу» шифром Цезаря</h1>
+    
+    <p><strong>Ключ шифрования:</strong> 10</p>
+    <p><strong>Алфавит:</strong> 33 буквы русского языка (включая «Ё»)</p>
+
+    <h2>Используемый алфавит (позиции):</h2>
+    <p>
+        А=0, Б=1, В=2, Г=3, Д=4, Е=5, Ё=6, Ж=7, З=8, И=9, Й=10,<br>
+        К=11, Л=12, М=13, Н=14, О=15, П=16, Р=17, С=18, Т=19, У=20,<br>
+        Ф=21, Х=22, Ц=23, Ч=24, Ш=25, Щ=26, Ъ=27, Ы=28, Ь=29, Э=30, Ю=31, Я=32
+    </p>
+
+    <h2>Пошаговое шифрование:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Буква</th>
+                <th>Индекс</th>
+                <th>(Индекс + 10) mod 33</th>
+                <th>Зашифрованная буква</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>П</td><td>16</td><td>(16 + 10) mod 33 = 26</td><td>Щ</td></tr>
+            <tr><td>Л</td><td>12</td><td>(12 + 10) mod 33 = 22</td><td>Х</td></tr>
+            <tr><td>Е</td><td>5</td><td>(5 + 10) mod 33 = 15</td><td>О</td></tr>
+            <tr><td>Ш</td><td>25</td><td>(25 + 10) mod 33 = 2</td><td>В</td></tr>
+            <tr><td>У</td><td>20</td><td>(20 + 10) mod 33 = 30</td><td>Э</td></tr>
+        </tbody>
+    </table>
+
+    <div class="result">
+        Зашифрованная фамилия: <strong>ЩХОВЭ</strong>
+    </div>
+
+    <p><em>Примечание: Шифр Цезаря сдвигает каждую букву на фиксированное число позиций в алфавите. Здесь использован полный русский алфавит из 33 букв, включая «Ё».</em></p>
+</body>
+</html>  
 <h2>12 января, 2026</h2>
     <p>
      Домены- 
