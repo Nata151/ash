@@ -526,3 +526,171 @@
 123456789012345678901234567890123456789012345678901234567890123456789012......Вот пример содержимого файла `index.html`, в котором отображается **пример 700-значного десятичного числа** (ровно 700 цифр):
 
 ```html
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бот FAQ — 20.02.2026</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 650px;
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        .date {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        .chat-area {
+            padding: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .message {
+            margin-bottom: 20px;
+            padding: 14px 18px;
+            border-radius: 18px;
+            max-width: 85%;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .user-message {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-left: auto;
+            border-bottom-right-radius: 4px;
+        }
+        .bot-message {
+            background: #f8f9fa;
+            color: #333;
+            margin-right: auto;
+            border-bottom-left-radius: 4px;
+            border-left: 4px solid #667eea;
+        }
+        .message-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .message-content {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .similarity {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: #666;
+            background: #e9ecef;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+        .answer {
+            display: block;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #ddd;
+            font-weight: 500;
+            color: #2e7d32;
+        }
+        .footer {
+            padding: 15px 25px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        .footer strong {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Бот FAQ</h1>
+            <span class="date" id="currentDate">20.02.2026</span>
+        </div>
+        
+        <div class="chat-area">
+            <!-- Сообщение пользователя -->
+            <div class="message user-message">
+                <div class="message-label">Вы</div>
+                <div class="message-content">Сколько ждать мой заказ?</div>
+            </div>
+            
+            <!-- Ответ бота -->
+            <div class="message bot-message">
+                <div class="message-label">Бот FAQ</div>
+                <div class="message-content">
+                    Найден FAQ-вопрос: <strong>Как быстро доставляется заказ?</strong>
+                    <span class="similarity">📊 Коэффициент схожести: sim = 0.706</span>
+                    <span class="answer">✅ Ответ: Наш стандартный срок доставки — 3–5 рабочих дней.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Сессия от <strong id="footerDate">20 февраля 2026 г.</strong> | 
+            Система интеллектуального поиска по базе знаний
+        </div>
+    </div>
+
+    <script>
+        // Автоматическая подстановка текущей даты (на случай, если файл откроют в другой день)
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            const optionsDate = { day: '2-digit', month: '2-digit', year: 'numeric' };
+            const optionsFull = { day: 'numeric', month: 'long', year: 'numeric' };
+            
+            // Форматируем дату для заголовка (ДД.ММ.ГГГГ)
+            const dateString = now.toLocaleDateString('ru-RU', optionsDate);
+            document.getElementById('currentDate').textContent = dateString;
+            
+            // Форматируем дату для футера (20 февраля 2026 г.)
+            const fullDateString = now.toLocaleDateString('ru-RU', optionsFull);
+            document.getElementById('footerDate').textContent = fullDateString;
+        });
+    </script>
+</body>
+</html> 
