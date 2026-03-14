@@ -535,3 +535,8 @@
 Ответ бот-FAQ: Наш стандартный срок доставки — 3–5 рабочих дней.
     </head>
 <body>    
+
+  new_student = pd.DataFrame({'Часы': [5]})
+prediction = regressor.predict(new_student)
+print(f"Студент занимался 5 часов")
+print(f"Прогноз баллов: {prediction[0]:.2f}")
